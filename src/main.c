@@ -33,10 +33,19 @@ enum  {
 
 typedef s32 WindowMessages;
 
-int main(int argument_count, const char *arguments[]) {
-  fprintf(stdout, "Hello world\n");
+int WINAPI WinMain(HINSTANCE hInstance,
+                   HINSTANCE hPrevInstance,
+                   LPSTR     lpCmdLine,
+                   int       nShowCmd) {
+  fprintf(stdout, "Starting Application...\n");
+  fprintf(stdout, "Exitting Application...\n");
+  return 0;
 }
 
+int main(int argument_count, const char *arguments[]) {
+  fprintf(stdout, "Hello world\n");
+  return WinMain(0, 0, 0, 0);
+}
 
 #include <glad/gl.c>
 #include "base.c"

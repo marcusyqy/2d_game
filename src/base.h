@@ -59,9 +59,9 @@ void string_builder_append_cstr(StringBuilder *string, const char *cstring);
 void string_builder_append_fmt(StringBuilder *string, const char *cstring, ...);
 void string_builder_append_strview(StringBuilder *string, StringView view);
 
-StringView cstr_to_strview(const char *string);
-StringView str_to_view(StringBuilder string);
-StringView strview_null();
+StringView cstr_to_str_view(const char *string);
+StringView str_to_str_view(StringBuilder string);
+StringView str_view_null();
 
 #endif // _BASE_H_
 

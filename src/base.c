@@ -75,18 +75,12 @@ void string_builder_append_strview(StringBuilder *string, StringView view) {
   string_builder_append_null(string);
 }
 
-StringView cstr_to_strview(const char *string) {
-  return (StringView) {
-    .count = strlen(string),
-    .buffer = string,
-  };
+StringView cstr_to_str_view(const char *string) {
+  return (StringView) { .count = strlen(string), .buffer = string, };
 }
 
-StringView str_to_view(StringBuilder string) {
-  return (StringView) {
-    .count = string.count,
-    .buffer = string.buffer,
-  };
+StringView str_to_str_view(StringBuilder string) {
+  return (StringView) { .count = string.count, .buffer = string.buffer, };
 }
 
 StringView strview_null() {

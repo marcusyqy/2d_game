@@ -9,7 +9,7 @@ if not exist .build mkdir .build
 if "%run%"=="1" set RUN=1
 
 set NAME=2d_game
-set CL_CCFLAGS=-external:W0 -std:clatest
+set CL_CCFLAGS=-external:W0 -std:clatest /SUBSYSTEM:CONSOLE
 set CCFLAGS=
 REM -nologo -MP -FC -Zi  -wd4530 -utf-8 -WX -W3 -EHsc
 
