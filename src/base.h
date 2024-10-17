@@ -48,20 +48,20 @@ static inline bool is_whitespace(char c) {
   return isspace(c);
 }
 
-StringBuilder string_builder_create(size_t capacity);
-void string_builder_free(StringBuilder *string);
-
-void string_builder_reserve_size(StringBuilder *string, size_t size);
-
-void string_builder_append_char(StringBuilder *string, char c);
-void string_builder_append_null(StringBuilder *string);
-void string_builder_append_cstr(StringBuilder *string, const char *cstring);
-void string_builder_append_fmt(StringBuilder *string, const char *cstring, ...);
-void string_builder_append_strview(StringBuilder *string, StringView view);
-
-StringView cstr_to_str_view(const char *string);
-StringView str_to_str_view(StringBuilder string);
-StringView str_view_null();
+// StringBuilder string_builder_create(size_t capacity);
+// void string_builder_free(StringBuilder *string);
+//
+// void string_builder_reserve_size(StringBuilder *string, size_t size);
+//
+// void string_builder_append_char(StringBuilder *string, char c);
+// void string_builder_append_null(StringBuilder *string);
+// void string_builder_append_cstr(StringBuilder *string, const char *cstring);
+// void string_builder_append_fmt(StringBuilder *string, const char *cstring, ...);
+// void string_builder_append_strview(StringBuilder *string, StringView view);
+//
+// StringView cstr_to_str_view(const char *string);
+// StringView str_to_str_view(StringBuilder string);
+// StringView str_view_null();
 
 #endif // _BASE_H_
 
