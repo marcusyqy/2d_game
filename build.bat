@@ -18,7 +18,7 @@ set GLFW_LIB=..\external\GLFW\glfw3_mt.lib
 pushd .build
 
 echo --[[COMPILING]]--
-cl ..\src\main.cpp %CL_CCFLAGS% -Fe:%NAME%.exe -I..\src -external:I..\external -link %GLFW_LIB%
+cl ..\src\main.c %CL_CCFLAGS% -Fe:%NAME%.exe -I..\src -external:I..\external -link %GLFW_LIB%
 REM clang ../src/main.c %CCFLAGS% -o %NAME%.exe -I..\src -isystem ..\external
 REM %glfw_lib%
 
